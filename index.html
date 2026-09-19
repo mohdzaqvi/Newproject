@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Zoman General Contracting Est. | Thoqbah, Saudi Arabia</title>
+<meta name="description" content="Reliable civil works, building construction, road line projects and rental trucks in Thoqbah, Saudi Arabia. Building Today for a Better Tomorrow.">
+<meta name="theme-color" content="#0a2f6b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a2f6b'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EMZ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0a2f6b;
+  --blue:#0d4aa8;
+  --sky:#3b8fe8;
+  --ice:#eaf3ff;
+  --mist:#f5f9ff;
+  --ink:#16243b;
+  --muted:#56667d;
+  --line:#d6e4f7;
+  --accent:#f2a20f;
+  --white:#ffffff;
+  --radius:16px;
+  --head:'Outfit','Segoe UI',Arial,sans-serif;
+  --body:'Figtree','Segoe UI',Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+
+/* ---------- Header ---------- */
+header.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:46px;height:46px;color:var(--navy)}
+.brand b{display:block;font-family:var(--head);font-weight:700;color:var(--navy);font-size:1.05rem;line-height:1.1}
+.brand small{display:block;color:var(--muted);font-size:.78rem;line-height:1.2}
+nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{display:block;padding:9px 14px;text-decoration:none;font-weight:500;color:var(--ink);border-radius:999px;transition:background .2s,color .2s}
+nav a:hover{background:var(--ice);color:var(--blue)}
+nav a.cta{background:var(--navy);color:#fff;font-weight:600}
+nav a.cta:hover{background:var(--blue)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--navy)}
+.menu-btn svg{margin:auto;width:24px;height:24px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:
+  radial-gradient(900px 500px at 88% 8%,#cfe4ff 0%,rgba(207,228,255,0) 60%),
+  linear-gradient(180deg,#fff 0%,var(--mist) 100%);
+  overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:32px;align-items:center;padding-block:56px 110px}
+.hero-logo{width:150px;height:150px;color:var(--navy);margin-bottom:8px}
+.name{font-family:var(--head);font-weight:800;color:var(--navy);font-size:clamp(2.4rem,5.4vw,4.1rem);line-height:1.04;margin:0;letter-spacing:-.02em}
+.sub{display:flex;align-items:center;gap:14px;margin:10px 0 6px;font-family:var(--head);font-weight:600;color:var(--blue);font-size:clamp(1.25rem,2.6vw,1.8rem)}
+.sub::before,.sub::after{content:"";height:2px;background:var(--navy);flex:0 0 28px;opacity:.7}
+.sub::after{display:none}
+.tagline{font-style:italic;color:#3a4a63;font-size:1.25rem;margin:0 0 20px}
+.lead{max-width:34rem;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--navy);transition:transform .15s,background .2s,color .2s;font-family:var(--head)}
+.btn.solid{background:var(--navy);color:#fff}
+.btn.solid:hover{background:var(--blue);border-color:var(--blue)}
+.btn.ghost{color:var(--navy);background:transparent}
+.btn.ghost:hover{background:var(--navy);color:#fff}
+.btn:active{transform:translateY(1px)}
+.site{width:100%;height:auto}
+.load{transform-origin:250px 60px;animation:sway 6s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
+.hero-wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;color:var(--navy)}
+
+/* ---------- Sections ---------- */
+section{padding:84px 0}
+.ribbon{display:inline-block;background:var(--navy);color:#fff;font-family:var(--head);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);padding:12px 64px 12px 28px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);--edge:calc((100vw - min(1180px,92vw)) / 2);margin:0 0 14px calc(-1 * var(--edge));padding-left:calc(var(--edge) + 28px)}
+.section-note{color:var(--muted);max-width:40rem;margin:0 0 44px}
+
+/* Services */
+#services{background:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;gap:18px;align-items:flex-start;transition:border-color .2s,box-shadow .2s}
+.card:hover{border-color:var(--sky);box-shadow:0 10px 30px -14px rgba(13,74,168,.35)}
+.ico{flex:0 0 62px;width:62px;height:62px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
+.ico svg{width:32px;height:32px}
+.card h3{font-family:var(--head);font-weight:700;color:var(--navy);font-size:1.15rem;line-height:1.25;margin:2px 0 8px}
+.card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.55}
+
+/* About */
+#about{background:var(--ice);position:relative}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+#about h2{font-family:var(--head);font-weight:800;color:var(--navy);font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.12;margin:0 0 16px;letter-spacing:-.01em}
+#about p{color:var(--muted);margin:0 0 16px}
+.pillars{display:grid;gap:14px}
+.pillar{background:#fff;border-radius:var(--radius);padding:22px 24px;display:flex;gap:18px;align-items:center;border-left:6px solid var(--blue)}
+.pillar:nth-child(2){border-left-color:var(--sky)}
+.pillar:nth-child(3){border-left-color:var(--accent)}
+.pillar svg{flex:0 0 44px;width:44px;height:44px;color:var(--navy)}
+.pillar h3{margin:0 0 2px;font-family:var(--head);font-weight:700;color:var(--navy);font-size:1.15rem}
+.pillar p{margin:0;font-size:.95rem}
+
+/* Work gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:8px}
+.tile{margin:0;position:relative;aspect-ratio:3/4;overflow:hidden;clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);margin-left:-3%}
+.tile:first-child{clip-path:polygon(0 0,100% 0,88% 100%,0 100%);margin-left:0}
+.tile:last-child{clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)}
+.tile svg,.tile img{width:100%;height:100%;object-fit:cover}
+.tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:38px 22px 16px;background:linear-gradient(0deg,rgba(10,47,107,.92),rgba(10,47,107,0));color:#fff;font-family:var(--head);font-weight:600}
+.gal-note{color:var(--muted);font-size:.9rem;margin-top:16px}
+
+/* Contact */
+#contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.info{background:var(--navy);color:#fff;border-radius:22px;padding:36px;position:relative;overflow:hidden}
+.info::after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;border:38px solid rgba(255,255,255,.07)}
+.info h3{font-family:var(--head);font-size:1.5rem;margin:0 0 4px}
+.info .role{color:#b8d3f6;margin:0 0 26px}
+.row{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px;text-decoration:none}
+.row .c{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center}
+.row .c svg{width:22px;height:22px}
+.row span{display:block;color:#b8d3f6;font-size:.85rem}
+.row b{font-weight:600;font-size:1.05rem;word-break:break-word}
+a.row:hover b{text-decoration:underline}
+form{border:1px solid var(--line);border-radius:22px;padding:36px;background:var(--mist)}
+form h3{font-family:var(--head);color:var(--navy);font-size:1.5rem;margin:0 0 4px}
+form .hint{margin:0 0 22px;color:var(--muted);font-size:.95rem}
+label{display:block;font-weight:600;font-size:.92rem;margin:0 0 6px;color:var(--navy)}
+input,select,textarea{width:100%;font:inherit;padding:13px 14px;border:1px solid #bcd0ea;border-radius:12px;background:#fff;color:var(--ink);margin-bottom:16px}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(59,143,232,.35);border-color:var(--sky)}
+textarea{min-height:110px;resize:vertical}
+form button{width:100%;justify-content:center;cursor:pointer;font-size:1rem}
+
+/* Footer */
+footer{background:var(--navy);color:#dbe8fb;position:relative;padding:0}
+footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:34px 0 40px}
+.foot .brand svg{color:#fff}
+.foot .brand b{color:#fff}
+.foot .brand small{color:#a9c5ee}
+.foot .trusted{font-family:var(--head);font-style:italic;font-weight:500;font-size:1.3rem;color:#fff;display:flex;align-items:center;gap:12px}
+.foot .trusted svg{width:34px;height:34px;color:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.15);padding:16px 0 22px;font-size:.88rem;color:#a9c5ee;text-align:center}
+
+/* Floating WhatsApp */
+.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px -6px rgba(0,0,0,.35);transition:transform .2s}
+.wa:hover{transform:scale(1.07)}
+.wa svg{width:32px;height:32px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero .wrap,.about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero .wrap{padding-block:36px 100px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(2,1fr);gap:12px}
+  .tile,.tile:first-child,.tile:last-child{clip-path:none;margin-left:0;border-radius:var(--radius);aspect-ratio:4/3}
+}
+@media (max-width:760px){
+  .menu-btn{display:grid}
+  nav{position:absolute;left:0;right:0;top:72px;background:#fff;border-bottom:1px solid var(--line);display:none;padding:10px 4%}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:stretch;gap:2px}
+  nav a{padding:13px 14px}
+  .brand small{display:none}
+  .grid{grid-template-columns:1fr}
+  section{padding:60px 0}
+  .info,form{padding:26px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .load{animation:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ SVG SYMBOLS (logo + icons) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!--
+      M.Z. LOGO (recreated from the visiting card).
+      To use your original logo file instead, replace each
+      <svg><use href="#mz-logo"/></svg> with <img src="logo.png" alt="MZ logo">
+    -->
+    <symbol id="mz-logo" viewBox="0 0 200 200">
+      <!-- outer arch -->
+      <path d="M34 168V98a66 66 0 0 1 132 0" fill="none" stroke="currentColor" stroke-width="17"/>
+      <!-- inner arch -->
+      <path d="M62 168v-68a38 38 0 0 1 76 0" fill="none" stroke="currentColor" stroke-width="6"/>
+      <!-- dotted building blocks dissolving downward -->
+      <g fill="currentColor">
+        <rect x="151" y="104" width="12" height="12"/><rect x="168" y="104" width="12" height="12" opacity=".7"/>
+        <rect x="151" y="121" width="12" height="12"/><rect x="168" y="121" width="12" height="12" opacity=".55"/><rect x="185" y="121" width="9" height="9" opacity=".35"/>
+        <rect x="134" y="138" width="12" height="12" opacity=".6"/><rect x="151" y="138" width="12" height="12" opacity=".85"/><rect x="168" y="138" width="12" height="12" opacity=".4"/>
+        <rect x="117" y="155" width="12" height="12" opacity=".4"/><rect x="134" y="155" width="12" height="12" opacity=".6"/><rect x="151" y="155" width="12" height="12" opacity=".3"/>
+      </g>
+      <!-- initials -->
+      <text x="98" y="190" text-anchor="middle" font-family="Outfit,Arial,sans-serif" font-weight="800" font-style="italic" font-size="22" fill="currentColor" letter-spacing="2">M. Z.</text>
+    </symbol>
+
+    <symbol id="i-building" viewBox="0 0 32 32"><g fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><path d="M6 29V7l10-4v26M16 29V12l10 3v14M3 29h26"/><path d="M10 11h2M10 16h2M10 21h2M20 18h2M20 23h2" stroke-linecap="round"/></g></symbol>
+    <symbol id="i-bricks" viewBox="0 0 32 32"><g fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"><rect x="3" y="6" width="26" height="20" rx="1"/><path d="M3 12.5h26M3 19h26M12 6v6.5M22 12.5V19M12 19v7"/></g></symbol>
+    <symbol id="i-helmet" viewBox="0 0 32 32"><g fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M6 20a10 10 0 0 1 20 0M3 20h26v3H3zM16 6v6M11 27h10M9 23v0"/><path d="M12 24v3M20 24v3"/></g></symbol>
+    <symbol id="i-road" viewBox="0 0 32 32"><g fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 3 4 29M20 3l8 26"/><path d="M16 5v4M16 13v5M16 22v6" stroke-width="2.4"/></g></symbol>
+    <symbol id="i-excavator" viewBox="0 0 32 32"><g fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="24" width="18" height="5" rx="2.5"/><path d="M7 24v-6h9v6M16 18l4-8 7 3M27 13l-2 7h-4"/><circle cx="8" cy="26.5" r=".4"/></g></symbol>
+    <symbol id="i-truck" viewBox="0 0 32 32"><g fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M2 8h17v14H2zM19 12h6l5 5v5H19z"/><circle cx="8" cy="24" r="3" fill="#0a2f6b"/><circle cx="24" cy="24" r="3" fill="#0a2f6b"/></g></symbol>
+
+    <symbol id="i-shield" viewBox="0 0 44 44"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><path d="M22 4 7 10v11c0 9 6 15 15 19 9-4 15-10 15-19V10z"/><path d="m15 22 5 5 9-10"/></g></symbol>
+    <symbol id="i-check" viewBox="0 0 44 44"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle cx="22" cy="22" r="17"/><path d="m14 22 6 6 11-12"/></g></symbol>
+    <symbol id="i-clock" viewBox="0 0 44 44"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"><circle cx="22" cy="22" r="17"/><path d="M22 11v12l8 5"/></g></symbol>
+
+    <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.5 7v.02L12 12.2l7.5-5.18V7z" transform="translate(0 0)"/><path fill="currentColor" d="m4 7 8 5.5L20 7v-.5H4z" opacity="0"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 32 32"><path fill="#fff" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7a.6.6 0 0 0 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.6 14.6 0 0 0 5.6 4.9c2 .8 2.8.9 3.8.7a3.2 3.2 0 0 0 2.1-1.5 2.6 2.6 0 0 0 .2-1.5c-.1-.1-.3-.2-.7-.4z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-hat" viewBox="0 0 40 40"><g fill="currentColor"><path d="M8 26a12 12 0 0 1 24 0z"/><rect x="4" y="27" width="32" height="4" rx="2"/><rect x="18" y="9" width="4" height="10" rx="1" fill="#0a2f6b"/></g></symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Muhammad Zoman General Contracting Est. home">
+      <svg aria-hidden="true"><use href="#mz-logo"/></svg>
+      <span><b>Muhammad Zoman</b><small>General Contracting Est.</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    <nav id="nav" aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Our work</a></li>
+        <li><a href="#contact" class="cta">Get a quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <svg class="hero-logo" role="img" aria-label="MZ logo"><use href="#mz-logo"/></svg>
+      <h1 class="name">Muhammad Zoman</h1>
+      <div class="sub">General Contracting Est.</div>
+      <p class="tagline">Building Today for a Better Tomorrow</p>
+      <p class="lead">We are a reliable and professional contracting company, committed to delivering high-quality civil works and road line projects with safety, quality and timely completion.</p>
+      <div class="btns">
+        <a class="btn solid" href="#contact">Get a quote</a>
+        <a class="btn ghost" href="#services">See our services</a>
+      </div>
+    </div>
+
+    <!-- Construction site illustration -->
+    <svg class="site" viewBox="0 0 520 470" role="img" aria-label="Building under construction with a tower crane">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bcd9ff"/><stop offset="1" stop-color="#eaf3ff"/></linearGradient>
+        <pattern id="lat" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M0 0 22 22M22 0 0 22" stroke="#e08f00" stroke-width="1.6" fill="none"/></pattern>
+        <pattern id="lat2" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 16 8 0l8 16" stroke="#e08f00" stroke-width="1.5" fill="none"/></pattern>
+      </defs>
+      <rect x="10" y="10" width="500" height="430" rx="26" fill="url(#sky)"/>
+      <ellipse cx="120" cy="90" rx="60" ry="16" fill="#fff" opacity=".85"/><ellipse cx="160" cy="80" rx="40" ry="14" fill="#fff" opacity=".85"/>
+      <ellipse cx="330" cy="150" rx="46" ry="12" fill="#fff" opacity=".7"/>
+
+      <!-- building frame -->
+      <g fill="#c9d6e6" stroke="#8ea2bb" stroke-width="1.5">
+        <rect x="60" y="410" width="360" height="9"/>
+        <rect x="60" y="330" width="360" height="9"/>
+        <rect x="60" y="250" width="360" height="9"/>
+        <rect x="80" y="170" width="320" height="9"/>
+      </g>
+      <g fill="#dbe4f0" stroke="#8ea2bb" stroke-width="1.5">
+        <rect x="70" y="339" width="12" height="71"/><rect x="150" y="339" width="12" height="71"/><rect x="230" y="339" width="12" height="71"/><rect x="310" y="339" width="12" height="71"/><rect x="398" y="339" width="12" height="71"/>
+        <rect x="70" y="259" width="12" height="71"/><rect x="150" y="259" width="12" height="71"/><rect x="230" y="259" width="12" height="71"/><rect x="310" y="259" width="12" height="71"/><rect x="398" y="259" width="12" height="71"/>
+        <rect x="90" y="179" width="12" height="71"/><rect x="170" y="179" width="12" height="71"/><rect x="250" y="179" width="12" height="71"/><rect x="330" y="179" width="12" height="71"/><rect x="386" y="179" width="12" height="71"/>
+      </g>
+      <!-- rebar stubs -->
+      <g stroke="#5c6b80" stroke-width="2" stroke-linecap="round">
+        <path d="M96 170v-26M176 170v-26M256 170v-26M336 170v-26M392 170v-26M91 170v-20M101 170v-20M171 170v-20M181 170v-20M251 170v-20M261 170v-20M331 170v-20M341 170v-20"/>
+      </g>
+      <!-- scaffold rails (orange-red like the flyer) -->
+      <g stroke="#e0533c" stroke-width="2.5" stroke-linecap="round"><path d="M62 300h356M62 220h356M82 150h316" opacity=".85"/></g>
+
+      <!-- ground and road curb -->
+      <rect x="10" y="419" width="500" height="21" fill="#7e93b1"/>
+      <path d="M10 419h500" stroke="#5f7596" stroke-width="2"/>
+      <g fill="#f2a20f"><rect x="20" y="428" width="40" height="7"/><rect x="100" y="428" width="40" height="7"/><rect x="180" y="428" width="40" height="7"/><rect x="260" y="428" width="40" height="7"/><rect x="340" y="428" width="40" height="7"/><rect x="420" y="428" width="40" height="7"/></g>
+
+      <!-- crane -->
+      <rect x="449" y="60" width="22" height="360" fill="url(#lat)" stroke="#e08f00" stroke-width="2.5"/>
+      <rect x="436" y="414" width="48" height="8" fill="#e08f00"/>
+      <rect x="440" y="44" width="40" height="18" fill="#f2a20f"/>
+      <path d="M460 20 440 44h40z" fill="#f2a20f"/>
+      <rect x="180" y="44" width="300" height="16" fill="url(#lat2)" stroke="#e08f00" stroke-width="2.5"/>
+      <rect x="480" y="44" width="30" height="16" fill="url(#lat2)" stroke="#e08f00" stroke-width="2.5"/>
+      <rect x="486" y="60" width="24" height="26" fill="#6b7f9d"/>
+      <path d="M460 20 200 46M460 20 505 46" stroke="#e08f00" stroke-width="1.8" fill="none"/>
+      <!-- swinging load -->
+      <g class="load">
+        <path d="M250 60v78" stroke="#33445e" stroke-width="2"/>
+        <rect x="244" y="60" width="12" height="9" fill="#33445e"/>
+        <path d="M250 138l-26 26M250 138l26 26" stroke="#33445e" stroke-width="1.6"/>
+        <rect x="216" y="164" width="68" height="14" fill="#4a5f7f"/>
+        <rect x="222" y="178" width="56" height="8" fill="#6b7f9d"/>
+      </g>
+    </svg>
+  </div>
+  <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40C240 90 480 90 760 55S1220 0 1440 30V90H0z"/><path fill="#3b8fe8" opacity=".55" d="M0 20C260 70 520 70 800 38S1230 -6 1440 12V30C1230 10 1080 55 800 58S260 92 0 42z"/></svg>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" style="padding-top:64px">
+  <div class="wrap">
+    <h2 class="ribbon">Our Services</h2>
+    <p class="section-note">From the first excavation to the final interlock, we handle civil works, road line projects and equipment rental under one roof.</p>
+
+    <div class="grid">
+      <article class="card">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-building"/></svg></div>
+        <div><h3>Building Construction</h3><p>Residential | Commercial | Industrial</p></div>
+      </article>
+      <article class="card">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-bricks"/></svg></div>
+        <div><h3>Masonry &amp; Plastering Works</h3><p>CMU | Block | Internal &amp; External Plaster</p></div>
+      </article>
+      <article class="card">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-helmet"/></svg></div>
+        <div><h3>Steel Fixing &amp; Concrete Works</h3><p>Reinforcement | Formwork | Concreting</p></div>
+      </article>
+      <article class="card">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-road"/></svg></div>
+        <div><h3>Road Line Works</h3><p>Road Construction | Interlock | Curbstone | Asphalt Works</p></div>
+      </article>
+      <article class="card">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-excavator"/></svg></div>
+        <div><h3>Earthworks &amp; Site Development</h3><p>Excavation | Backfilling | Grading</p></div>
+      </article>
+      <article class="card">
+        <div class="ico"><svg aria-hidden="true"><use href="#i-truck"/></svg></div>
+        <div><h3>Rental Trucks</h3><p>Water Tanker | Dump Truck | Ready Mix | Drum Truck</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <h2>Your trusted partner in construction</h2>
+      <p>Muhammad Zoman General Contracting Est. is based in Thoqbah, Saudi Arabia. We take on civil works and road line projects of every size, and we run each one with the same three commitments.</p>
+      <p>Talk to us early. A quick site discussion helps us plan the manpower, materials and trucks your project needs before work begins.</p>
+      <a class="btn solid" href="#contact">Discuss your project</a>
+    </div>
+    <div class="pillars">
+      <div class="pillar"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Safety</h3><p>Trained crews, proper PPE and a safe site on every job.</p></div></div>
+      <div class="pillar"><svg aria-hidden="true"><use href="#i-check"/></svg><div><h3>Quality</h3><p>Good materials and careful workmanship from foundation to finish.</p></div></div>
+      <div class="pillar"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><h3>Timely completion</h3><p>Clear schedules, and we keep you updated until handover.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUR WORK ============ -->
+<section id="work">
+  <div class="wrap">
+    <h2 class="ribbon">Our Work</h2>
+    <p class="section-note">A look at the kind of projects we deliver.</p>
+
+    <div class="gallery">
+      <!--
+        TO USE YOUR REAL PROJECT PHOTOS:
+        Replace an <svg>...</svg> below with:
+        <img src="photos/project1.jpg" alt="Building construction project" loading="lazy">
+      -->
+      <figure class="tile">
+        <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="400" fill="#cfe2fb"/>
+          <g fill="#c9d6e6" stroke="#7d92b0" stroke-width="2"><rect x="40" y="320" width="230" height="10"/><rect x="40" y="240" width="230" height="10"/><rect x="40" y="160" width="230" height="10"/><rect x="60" y="80" width="190" height="10"/></g>
+          <g fill="#dbe4f0" stroke="#7d92b0" stroke-width="2"><rect x="46" y="250" width="12" height="70"/><rect x="120" y="250" width="12" height="70"/><rect x="190" y="250" width="12" height="70"/><rect x="250" y="250" width="12" height="70"/><rect x="46" y="170" width="12" height="70"/><rect x="120" y="170" width="12" height="70"/><rect x="190" y="170" width="12" height="70"/><rect x="250" y="170" width="12" height="70"/><rect x="66" y="90" width="12" height="70"/><rect x="150" y="90" width="12" height="70"/><rect x="232" y="90" width="12" height="70"/></g>
+          <rect y="330" width="300" height="70" fill="#7e93b1"/>
+        </svg>
+        <figcaption>Building construction</figcaption>
+      </figure>
+      <figure class="tile">
+        <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="400" fill="#33445e"/>
+          <g stroke="#9aa9be" stroke-width="5">
+            <path d="M0 60h300M0 120h300M0 180h300M0 240h300M0 300h300M0 360h300"/>
+            <path d="M40 0v400M100 0v400M160 0v400M220 0v400M280 0v400"/>
+          </g>
+          <g fill="#f2a20f"><circle cx="40" cy="60" r="6"/><circle cx="100" cy="120" r="6"/><circle cx="160" cy="180" r="6"/><circle cx="220" cy="240" r="6"/><circle cx="280" cy="300" r="6"/><circle cx="100" cy="300" r="6"/><circle cx="220" cy="60" r="6"/><circle cx="40" cy="240" r="6"/></g>
+        </svg>
+        <figcaption>Steel fixing &amp; concrete</figcaption>
+      </figure>
+      <figure class="tile">
+        <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="400" fill="#cfe2fb"/>
+          <rect y="150" width="300" height="60" fill="#e9dcc0"/>
+          <polygon points="130,210 170,210 300,400 0,400" fill="#4a5568"/>
+          <polygon points="0,400 130,210 118,210 -60,400" fill="#f2a20f"/>
+          <polygon points="300,400 170,210 182,210 360,400" fill="#f2a20f"/>
+          <path d="M150 215 150 250M150 275 150 320M150 345 150 400" stroke="#fff" stroke-width="6"/>
+          <g fill="#1b2a41"><polygon points="118,210 130,210 0,400 -30,400"/><polygon points="182,210 170,210 300,400 330,400"/></g>
+        </svg>
+        <figcaption>Road line works</figcaption>
+      </figure>
+      <figure class="tile">
+        <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="400" fill="#cfe2fb"/>
+          <rect y="300" width="300" height="100" fill="#d9c9a3"/>
+          <g>
+            <rect x="20" y="230" width="150" height="62" fill="#fff" stroke="#8ea2bb" stroke-width="2"/>
+            <rect x="170" y="246" width="60" height="46" fill="#f2f6fb" stroke="#8ea2bb" stroke-width="2"/>
+            <rect x="180" y="252" width="34" height="18" fill="#9bc3f3"/>
+            <circle cx="60" cy="298" r="15" fill="#1b2a41"/><circle cx="130" cy="298" r="15" fill="#1b2a41"/><circle cx="200" cy="298" r="15" fill="#1b2a41"/>
+          </g>
+          <g>
+            <path d="M40 350h90l14 -28h56v28h20v20H40z" fill="#fff" stroke="#8ea2bb" stroke-width="2" opacity=".0"/>
+          </g>
+        </svg>
+        <figcaption>Rental trucks</figcaption>
+      </figure>
+    </div>
+    <p class="gal-note">Project photos can be added here. Send us your site pictures and we will show them on this page.</p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="ribbon">Contact Us</h2>
+    <p class="section-note">Tell us about your project. We will get back to you on WhatsApp or by phone.</p>
+
+    <div class="contact-grid">
+      <div class="info">
+        <h3>Anup Rasaily</h3>
+        <p class="role">Project Manager</p>
+
+        <a class="row" href="tel:+966570118635">
+          <div class="c"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+          <div><span>Call or WhatsApp</span><b>+966 57 011 8635</b></div>
+        </a>
+        <a class="row" href="mailto:anuprasaily11@gmail.com">
+          <div class="c"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v.4l-10 6.6L2 6.4V6a1 1 0 0 1 1-1zm-1 3.8 10 6.6 10-6.6V18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg></div>
+          <div><span>Email</span><b>anuprasaily11@gmail.com</b></div>
+        </a>
+        <div class="row">
+          <div class="c"><svg aria-hidden="true"><use href="#i-pin"/></svg></div>
+          <div><span>Address</span><b>P.O. Box 20571, P. Code 31952<br>Thoqbah, Saudi Arabia</b></div>
+        </div>
+        <a class="row" href="tel:+966138948302">
+          <div class="c"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+          <div><span>Office</span><b>+966 13 894 8302</b></div>
+        </a>
+      </div>
+
+      <form id="quoteForm">
+        <h3>Request a quote</h3>
+        <p class="hint">This opens WhatsApp with your message ready to send.</p>
+        <label for="fName">Your name</label>
+        <input id="fName" name="name" type="text" autocomplete="name" required>
+        <label for="fService">Service you need</label>
+        <select id="fService" name="service">
+          <option>Building Construction</option>
+          <option>Masonry &amp; Plastering Works</option>
+          <option>Steel Fixing &amp; Concrete Works</option>
+          <option>Road Line Works</option>
+          <option>Earthworks &amp; Site Development</option>
+          <option>Rental Trucks</option>
+        </select>
+        <label for="fMsg">Project details</label>
+        <textarea id="fMsg" name="message" placeholder="Location, size of work, start date..." required></textarea>
+        <button class="btn solid" type="submit">Send on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <svg class="wave" viewBox="0 0 1440 70" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 0h1440v20C1180 70 900 60 640 34S200 -6 0 30z"/></svg>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top">
+        <svg aria-hidden="true"><use href="#mz-logo"/></svg>
+        <span><b>Muhammad Zoman</b><small>General Contracting Est.</small></span>
+      </a>
+      <div class="trusted"><svg aria-hidden="true"><use href="#i-hat"/></svg>Your Trusted Partner in Construction</div>
+    </div>
+    <div class="copy">&copy; <span id="yr">2026</span> Muhammad Zoman General Contracting Est. All rights reserved.</div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/966570118635" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+
+<script>
+  // mobile menu
+  var btn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  });
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
+
+  // footer year
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // quote form -> WhatsApp
+  document.getElementById('quoteForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target;
+    var text='Hello, my name is '+f.name.value+'.\nService: '+f.service.value+'\nDetails: '+f.message.value;
+    window.open('https://wa.me/966570118635?text='+encodeURIComponent(text),'_blank','noopener');
+  });
+</script>
+</body>
+</html>
