@@ -178,8 +178,7 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
 <body>
 
 <!-- ============ SVG SYMBOLS (logo + icons) ============ -->
-<svg width="0" height="0"  alt="Buistyle="position:absolute" aria-hidden="true" focusable="false">
-  <!--<img class="site" src="1.jpg" alt="Building under construction">-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
   <defs>
     <!--
       M.Z. LOGO (recreated from the visiting card).
@@ -258,59 +257,8 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
       </div>
     </div>
 
-    <!-- Construction site illustration -->
-    <svg class="site" viewBox="0 0 520 470" role="img" aria-label="Building under construction with a tower crane">
-      <defs>
-        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bcd9ff"/><stop offset="1" stop-color="#eaf3ff"/></linearGradient>
-        <pattern id="lat" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M0 0 22 22M22 0 0 22" stroke="#e08f00" stroke-width="1.6" fill="none"/></pattern>
-        <pattern id="lat2" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M0 16 8 0l8 16" stroke="#e08f00" stroke-width="1.5" fill="none"/></pattern>
-      </defs>
-      <rect x="10" y="10" width="500" height="430" rx="26" fill="url(#sky)"/>
-      <ellipse cx="120" cy="90" rx="60" ry="16" fill="#fff" opacity=".85"/><ellipse cx="160" cy="80" rx="40" ry="14" fill="#fff" opacity=".85"/>
-      <ellipse cx="330" cy="150" rx="46" ry="12" fill="#fff" opacity=".7"/>
-
-      <!-- building frame -->
-      <g fill="#c9d6e6" stroke="#8ea2bb" stroke-width="1.5">
-        <rect x="60" y="410" width="360" height="9"/>
-        <rect x="60" y="330" width="360" height="9"/>
-        <rect x="60" y="250" width="360" height="9"/>
-        <rect x="80" y="170" width="320" height="9"/>
-      </g>
-      <g fill="#dbe4f0" stroke="#8ea2bb" stroke-width="1.5">
-        <rect x="70" y="339" width="12" height="71"/><rect x="150" y="339" width="12" height="71"/><rect x="230" y="339" width="12" height="71"/><rect x="310" y="339" width="12" height="71"/><rect x="398" y="339" width="12" height="71"/>
-        <rect x="70" y="259" width="12" height="71"/><rect x="150" y="259" width="12" height="71"/><rect x="230" y="259" width="12" height="71"/><rect x="310" y="259" width="12" height="71"/><rect x="398" y="259" width="12" height="71"/>
-        <rect x="90" y="179" width="12" height="71"/><rect x="170" y="179" width="12" height="71"/><rect x="250" y="179" width="12" height="71"/><rect x="330" y="179" width="12" height="71"/><rect x="386" y="179" width="12" height="71"/>
-      </g>
-      <!-- rebar stubs -->
-      <g stroke="#5c6b80" stroke-width="2" stroke-linecap="round">
-        <path d="M96 170v-26M176 170v-26M256 170v-26M336 170v-26M392 170v-26M91 170v-20M101 170v-20M171 170v-20M181 170v-20M251 170v-20M261 170v-20M331 170v-20M341 170v-20"/>
-      </g>
-      <!-- scaffold rails (orange-red like the flyer) -->
-      <g stroke="#e0533c" stroke-width="2.5" stroke-linecap="round"><path d="M62 300h356M62 220h356M82 150h316" opacity=".85"/></g>
-
-      <!-- ground and road curb -->
-      <rect x="10" y="419" width="500" height="21" fill="#7e93b1"/>
-      <path d="M10 419h500" stroke="#5f7596" stroke-width="2"/>
-      <g fill="#f2a20f"><rect x="20" y="428" width="40" height="7"/><rect x="100" y="428" width="40" height="7"/><rect x="180" y="428" width="40" height="7"/><rect x="260" y="428" width="40" height="7"/><rect x="340" y="428" width="40" height="7"/><rect x="420" y="428" width="40" height="7"/></g>
-
-      <!-- crane -->
-      <rect x="449" y="60" width="22" height="360" fill="url(#lat)" stroke="#e08f00" stroke-width="2.5"/>
-      <rect x="436" y="414" width="48" height="8" fill="#e08f00"/>
-      <rect x="440" y="44" width="40" height="18" fill="#f2a20f"/>
-      <path d="M460 20 440 44h40z" fill="#f2a20f"/>
-      <rect x="180" y="44" width="300" height="16" fill="url(#lat2)" stroke="#e08f00" stroke-width="2.5"/>
-      <rect x="480" y="44" width="30" height="16" fill="url(#lat2)" stroke="#e08f00" stroke-width="2.5"/>
-      <rect x="486" y="60" width="24" height="26" fill="#6b7f9d"/>
-      <path d="M460 20 200 46M460 20 505 46" stroke="#e08f00" stroke-width="1.8" fill="none"/>
-      <!-- swinging load -->
-      <g class="load">
-        <path d="M250 60v78" stroke="#33445e" stroke-width="2"/>
-        <rect x="244" y="60" width="12" height="9" fill="#33445e"/>
-        <path d="M250 138l-26 26M250 138l26 26" stroke="#33445e" stroke-width="1.6"/>
-        <rect x="216" y="164" width="68" height="14" fill="#4a5f7f"/>
-        <rect x="222" y="178" width="56" height="8" fill="#6b7f9d"/>
-      </g>
-    </svg>
+    <!-- Real building photo -->
+    <img class="site" src="1.jpg" alt="Building under construction" loading="eager" style="border-radius:26px;object-fit:cover;aspect-ratio:520/470;width:100%">
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40C240 90 480 90 760 55S1220 0 1440 30V90H0z"/><path fill="#3b8fe8" opacity=".55" d="M0 20C260 70 520 70 800 38S1230 -6 1440 12V30C1230 10 1080 55 800 58S260 92 0 42z"/></svg>
 </div>
