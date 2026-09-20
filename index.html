@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mohammad Zoman General Contracting Est. | Thoqbah, Saudi Arabia</title>
+<title>Mohammed Zoman General Contracting Est. | Thoqbah, Saudi Arabia</title>
 <meta name="description" content="Reliable civil works, building construction, road line projects and rental trucks in Thoqbah, Saudi Arabia. Building Today for a Better Tomorrow.">
 <meta name="theme-color" content="#0a2f6b">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a2f6b'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EMZ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -30,6 +30,15 @@
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+html[dir="rtl"] body{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] .name,html[dir="rtl"] .ribbon,html[dir="rtl"] .brand b,html[dir="rtl"] .sub,html[dir="rtl"] .btn,html[dir="rtl"] .foot .trusted{font-family:'Cairo','Segoe UI',Arial,sans-serif}
+html[dir="rtl"] .sub::before{order:2}
+html[dir="rtl"] .row{text-align:right}
+html[dir="rtl"] .ribbon{clip-path:polygon(100% 0,0 0,26px 100%,100% 100%);padding:12px 28px 12px 64px;margin:0 calc(-1 * var(--edge)) 14px 0;padding-right:calc(var(--edge) + 28px);padding-left:28px}
+
+/* Language toggle button */
+.lang-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1.5px solid var(--navy);border-radius:999px;background:#fff;color:var(--navy);font-weight:700;font-size:.88rem;cursor:pointer;font-family:var(--head);white-space:nowrap}
+.lang-btn:hover{background:var(--ice)}
 img,svg{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
@@ -50,19 +59,19 @@ nav a.cta:hover{background:var(--blue)}
 .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--navy)}
 .menu-btn svg{margin:auto;width:24px;height:24px}
 
-/* ---------- Hero ---------- */
-.hero{position:relative;background:
-  radial-gradient(900px 500px at 88% 8%,#cfe4ff 0%,rgba(207,228,255,0) 60%),
-  linear-gradient(180deg,#fff 0%,var(--mist) 100%);
-  overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:32px;align-items:center;padding-block:56px 110px}
-.hero-logo{width:150px;height:150px;color:var(--navy);margin-bottom:8px}
-.name{font-family:var(--head);font-weight:800;color:var(--navy);font-size:clamp(2.4rem,5.4vw,4.1rem);line-height:1.04;margin:0;letter-spacing:-.02em}
-.sub{display:flex;align-items:center;gap:14px;margin:10px 0 6px;font-family:var(--head);font-weight:600;color:var(--blue);font-size:clamp(1.25rem,2.6vw,1.8rem)}
-.sub::before,.sub::after{content:"";height:2px;background:var(--navy);flex:0 0 28px;opacity:.7}
+/* ---------- Hero (video background) ---------- */
+.hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;background:var(--navy)}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.hero-overlay{position:absolute;inset:0;z-index:1;
+  background:linear-gradient(180deg,rgba(6,26,63,.82) 0%,rgba(9,38,86,.62) 45%,rgba(6,26,63,.9) 100%)}
+.hero-content{position:relative;z-index:2;padding-block:120px 130px;max-width:640px}
+.hero-logo{width:120px;height:120px;color:#fff;margin-bottom:8px;filter:drop-shadow(0 4px 16px rgba(0,0,0,.35))}
+.name{font-family:var(--head);font-weight:800;color:#fff;font-size:clamp(2.4rem,5.4vw,4.1rem);line-height:1.04;margin:0;letter-spacing:-.02em;text-shadow:0 4px 24px rgba(0,0,0,.35)}
+.sub{display:flex;align-items:center;gap:14px;margin:10px 0 6px;font-family:var(--head);font-weight:600;color:#bcd9ff;font-size:clamp(1.25rem,2.6vw,1.8rem)}
+.sub::before,.sub::after{content:"";height:2px;background:#fff;flex:0 0 28px;opacity:.7}
 .sub::after{display:none}
-.tagline{font-style:italic;color:#3a4a63;font-size:1.25rem;margin:0 0 20px}
-.lead{max-width:34rem;color:var(--muted);margin:0 0 28px}
+.tagline{font-style:italic;color:#e7f0ff;font-size:1.25rem;margin:0 0 20px}
+.lead{max-width:34rem;color:#cfe0f7;margin:0 0 28px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--navy);transition:transform .15s,background .2s,color .2s;font-family:var(--head)}
 .btn.solid{background:var(--navy);color:#fff}
@@ -70,10 +79,9 @@ nav a.cta:hover{background:var(--blue)}
 .btn.ghost{color:var(--navy);background:transparent}
 .btn.ghost:hover{background:var(--navy);color:#fff}
 .btn:active{transform:translateY(1px)}
-.site{width:100%;height:auto}
-.load{transform-origin:250px 60px;animation:sway 6s ease-in-out infinite}
-@keyframes sway{0%,100%{transform:rotate(-1.6deg)}50%{transform:rotate(1.6deg)}}
-.hero-wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;color:var(--navy)}
+.hero .btn.ghost{color:#fff;border-color:#fff}
+.hero .btn.ghost:hover{background:#fff;color:var(--navy)}
+.hero-wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;color:var(--navy);z-index:2}
 
 /* ---------- Sections ---------- */
 section{padding:84px 0}
@@ -152,8 +160,8 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
 
 /* ---------- Responsive ---------- */
 @media (max-width:980px){
-  .hero .wrap,.about-grid,.contact-grid{grid-template-columns:1fr}
-  .hero .wrap{padding-block:36px 100px}
+  .about-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-content{padding-block:90px 110px;max-width:100%}
   .grid{grid-template-columns:repeat(2,1fr)}
   .gallery{grid-template-columns:repeat(2,1fr);gap:12px}
   .tile,.tile:first-child,.tile:last-child{clip-path:none;margin-left:0;border-radius:var(--radius);aspect-ratio:4/3}
@@ -168,10 +176,10 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
   .grid{grid-template-columns:1fr}
   section{padding:60px 0}
   .info,form{padding:26px}
+  .hero{min-height:78vh}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .load{animation:none}
 }
 </style>
 </head>
@@ -226,15 +234,16 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
   <div class="wrap bar">
     <a class="brand" href="#top" aria-label="Muhammad Zoman General Contracting Est. home">
       <svg aria-hidden="true"><use href="#mz-logo"/></svg>
-      <span><b>Mohammed Zoman</b><small>General Contracting Est.</small></span>
+      <span><b data-i18n="brandName">Mohammed Zoman</b><small data-i18n="brandSub">General Contracting Est.</small></span>
     </a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     <nav id="nav" aria-label="Main">
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Our work</a></li>
-        <li><a href="#contact" class="cta">Get a quote</a></li>
+        <li><a href="#services" data-i18n="navServices">Services</a></li>
+        <li><a href="#about" data-i18n="navAbout">About</a></li>
+        <li><a href="#work" data-i18n="navWork">Our work</a></li>
+        <li><a href="#contact" class="cta" data-i18n="navQuote">Get a quote</a></li>
+        <li><button type="button" class="lang-btn" id="langToggle">عربي</button></li>
       </ul>
     </nav>
   </div>
@@ -244,21 +253,22 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
 
 <!-- ============ HERO ============ -->
 <div class="hero">
-  <div class="wrap">
+  <video class="hero-video" autoplay muted loop playsinline poster="1.jpg">
+    <source src="1.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
     <div>
       <svg class="hero-logo" role="img" aria-label="MZ logo"><use href="#mz-logo"/></svg>
-      <h1 class="name">Mohammed Zoman</h1>
-      <div class="sub">General Contracting Est.</div>
-      <p class="tagline">Building Today for a Better Tomorrow</p>
-      <p class="lead">We are a reliable and professional contracting company, committed to delivering high-quality civil works and road line projects with safety, quality and timely completion.</p>
+      <h1 class="name" data-i18n="brandName">Mohammad Zoman</h1>
+      <div class="sub" data-i18n="brandSub">General Contracting Est.</div>
+      <p class="tagline" data-i18n="tagline">Building Today for a Better Tomorrow</p>
+      <p class="lead" data-i18n="heroLead">We are a reliable and professional contracting company, committed to delivering high-quality civil works and road line projects with safety, quality and timely completion.</p>
       <div class="btns">
-        <a class="btn solid" href="#contact">Get a quote</a>
-        <a class="btn ghost" href="#services">See our services</a>
+        <a class="btn solid" href="#contact" data-i18n="navQuote">Get a quote</a>
+        <a class="btn ghost" href="#services" data-i18n="seeServices">See our services</a>
       </div>
     </div>
-
-    <!-- Real building photo -->
-    <img class="site" src="1.jpg" alt="Building under construction" loading="eager" style="border-radius:26px;object-fit:cover;aspect-ratio:520/470;width:100%">
   </div>
   <svg class="hero-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 40C240 90 480 90 760 55S1220 0 1440 30V90H0z"/><path fill="#3b8fe8" opacity=".55" d="M0 20C260 70 520 70 800 38S1230 -6 1440 12V30C1230 10 1080 55 800 58S260 92 0 42z"/></svg>
 </div>
@@ -266,33 +276,33 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
 <!-- ============ SERVICES ============ -->
 <section id="services" style="padding-top:64px">
   <div class="wrap">
-    <h2 class="ribbon">Our Services</h2>
-    <p class="section-note">From the first excavation to the final interlock, we handle civil works, road line projects and equipment rental under one roof.</p>
+    <h2 class="ribbon" data-i18n="servicesTitle">Our Services</h2>
+    <p class="section-note" data-i18n="servicesNote">From the first excavation to the final interlock, we handle civil works, road line projects and equipment rental under one roof.</p>
 
     <div class="grid">
       <article class="card">
         <div class="ico"><svg aria-hidden="true"><use href="#i-building"/></svg></div>
-        <div><h3>Building Construction</h3><p>Residential | Commercial | Industrial</p></div>
+        <div><h3 data-i18n="svc1Title">Building Construction</h3><p data-i18n="svc1Desc">Residential | Commercial | Industrial</p></div>
       </article>
       <article class="card">
         <div class="ico"><svg aria-hidden="true"><use href="#i-bricks"/></svg></div>
-        <div><h3>Masonry &amp; Plastering Works</h3><p>CMU | Block | Internal &amp; External Plaster</p></div>
+        <div><h3 data-i18n="svc2Title">Masonry &amp; Plastering Works</h3><p data-i18n="svc2Desc">CMU | Block | Internal &amp; External Plaster</p></div>
       </article>
       <article class="card">
         <div class="ico"><svg aria-hidden="true"><use href="#i-helmet"/></svg></div>
-        <div><h3>Steel Fixing &amp; Concrete Works</h3><p>Reinforcement | Formwork | Concreting</p></div>
+        <div><h3 data-i18n="svc3Title">Steel Fixing &amp; Concrete Works</h3><p data-i18n="svc3Desc">Reinforcement | Formwork | Concreting</p></div>
       </article>
       <article class="card">
         <div class="ico"><svg aria-hidden="true"><use href="#i-road"/></svg></div>
-        <div><h3>Road Line Works</h3><p>Road Construction | Interlock | Curbstone | Asphalt Works</p></div>
+        <div><h3 data-i18n="svc4Title">Road Line Works</h3><p data-i18n="svc4Desc">Road Construction | Interlock | Curbstone | Asphalt Works</p></div>
       </article>
       <article class="card">
         <div class="ico"><svg aria-hidden="true"><use href="#i-excavator"/></svg></div>
-        <div><h3>Earthworks &amp; Site Development</h3><p>Excavation | Backfilling | Grading</p></div>
+        <div><h3 data-i18n="svc5Title">Earthworks &amp; Site Development</h3><p data-i18n="svc5Desc">Excavation | Backfilling | Grading</p></div>
       </article>
       <article class="card">
         <div class="ico"><svg aria-hidden="true"><use href="#i-truck"/></svg></div>
-        <div><h3>Eearth Moving Equipment</h3><p>Water Tanker | Dump Truck | Ready Mix | Drum Truck</p></div>
+        <div><h3 data-i18n="svc6Title">Eearth Moving Equipment</h3><p data-i18n="svc6Desc">Water Tanker | Dump Truck | Ready Mix | Drum Truck</p></div>
       </article>
     </div>
   </div>
@@ -302,15 +312,15 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
 <section id="about">
   <div class="wrap about-grid">
     <div>
-      <h2>Your trusted partner in construction</h2>
-      <p>Muhammad Zoman General Contracting Est. is based in Thoqbah, Saudi Arabia. We take on civil works and road line projects of every size, and we run each one with the same three commitments.</p>
-      <p>Talk to us early. A quick site discussion helps us plan the manpower, materials and trucks your project needs before work begins.</p>
-      <a class="btn solid" href="#contact">Discuss your project</a>
+      <h2 data-i18n="aboutTitle">Your trusted partner in construction</h2>
+      <p data-i18n="aboutP1">Muhammad Zoman General Contracting Est. is based in Thoqbah, Saudi Arabia. We take on civil works and road line projects of every size, and we run each one with the same three commitments.</p>
+      <p data-i18n="aboutP2">Talk to us early. A quick site discussion helps us plan the manpower, materials and trucks your project needs before work begins.</p>
+      <a class="btn solid" href="#contact" data-i18n="aboutCta">Discuss your project</a>
     </div>
     <div class="pillars">
-      <div class="pillar"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><h3>Safety</h3><p>Trained crews, proper PPE and a safe site on every job.</p></div></div>
-      <div class="pillar"><svg aria-hidden="true"><use href="#i-check"/></svg><div><h3>Quality</h3><p>Good materials and careful workmanship from foundation to finish.</p></div></div>
-      <div class="pillar"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><h3>Timely completion</h3><p>Clear schedules, and we keep you updated until handover.</p></div></div>
+      <div class="pillar"><svg aria-hidden="true"><use href="#i-shield"/></svg><div><h3 data-i18n="pillar1Title">Safety</h3><p data-i18n="pillar1Desc">Trained crews, proper PPE and a safe site on every job.</p></div></div>
+      <div class="pillar"><svg aria-hidden="true"><use href="#i-check"/></svg><div><h3 data-i18n="pillar2Title">Quality</h3><p data-i18n="pillar2Desc">Good materials and careful workmanship from foundation to finish.</p></div></div>
+      <div class="pillar"><svg aria-hidden="true"><use href="#i-clock"/></svg><div><h3 data-i18n="pillar3Title">Timely completion</h3><p data-i18n="pillar3Desc">Clear schedules, and we keep you updated until handover.</p></div></div>
     </div>
   </div>
 </section>
@@ -318,8 +328,8 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
 <!-- ============ OUR WORK ============ -->
 <section id="work">
   <div class="wrap">
-    <h2 class="ribbon">Our Work</h2>
-    <p class="section-note">A look at the kind of projects we deliver.</p>
+    <h2 class="ribbon" data-i18n="workTitle">Our Work</h2>
+    <p class="section-note" data-i18n="workNote">A look at the kind of projects we deliver.</p>
 
     <div class="gallery">
       <!--
@@ -334,7 +344,7 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
           <g fill="#dbe4f0" stroke="#7d92b0" stroke-width="2"><rect x="46" y="250" width="12" height="70"/><rect x="120" y="250" width="12" height="70"/><rect x="190" y="250" width="12" height="70"/><rect x="250" y="250" width="12" height="70"/><rect x="46" y="170" width="12" height="70"/><rect x="120" y="170" width="12" height="70"/><rect x="190" y="170" width="12" height="70"/><rect x="250" y="170" width="12" height="70"/><rect x="66" y="90" width="12" height="70"/><rect x="150" y="90" width="12" height="70"/><rect x="232" y="90" width="12" height="70"/></g>
           <rect y="330" width="300" height="70" fill="#7e93b1"/>
         </svg>
-        <figcaption>Building construction</figcaption>
+        <figcaption data-i18n="gal1">Building construction</figcaption>
       </figure>
       <figure class="tile">
         <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -345,7 +355,7 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
           </g>
           <g fill="#f2a20f"><circle cx="40" cy="60" r="6"/><circle cx="100" cy="120" r="6"/><circle cx="160" cy="180" r="6"/><circle cx="220" cy="240" r="6"/><circle cx="280" cy="300" r="6"/><circle cx="100" cy="300" r="6"/><circle cx="220" cy="60" r="6"/><circle cx="40" cy="240" r="6"/></g>
         </svg>
-        <figcaption>Steel fixing &amp; concrete</figcaption>
+        <figcaption data-i18n="gal2">Steel fixing &amp; concrete</figcaption>
       </figure>
       <figure class="tile">
         <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -357,7 +367,7 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
           <path d="M150 215 150 250M150 275 150 320M150 345 150 400" stroke="#fff" stroke-width="6"/>
           <g fill="#1b2a41"><polygon points="118,210 130,210 0,400 -30,400"/><polygon points="182,210 170,210 300,400 330,400"/></g>
         </svg>
-        <figcaption>Road line works</figcaption>
+        <figcaption data-i18n="gal3">Road line works</figcaption>
       </figure>
       <figure class="tile">
         <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -373,7 +383,7 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
             <path d="M40 350h90l14 -28h56v28h20v20H40z" fill="#fff" stroke="#8ea2bb" stroke-width="2" opacity=".0"/>
           </g>
         </svg>
-        <figcaption>Earth Moving Equipment</figcaption>
+        <figcaption data-i18n="gal4">Earth Moving Equipment</figcaption>
       </figure>
     </div>
     <p class="gal-note"></p>
@@ -383,49 +393,49 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
 <!-- ============ CONTACT ============ -->
 <section id="contact" style="padding-top:20px">
   <div class="wrap">
-    <h2 class="ribbon">Contact Us</h2>
-    <p class="section-note">Tell us about your project. We will get back to you on WhatsApp or by phone.</p>
+    <h2 class="ribbon" data-i18n="contactTitle">Contact Us</h2>
+    <p class="section-note" data-i18n="contactNote">Tell us about your project. We will get back to you on WhatsApp or by phone.</p>
 
     <div class="contact-grid">
       <div class="info">
         <h3>Anup Rasaily</h3>
-        <p class="role">Project Manager</p>
+        <p class="role" data-i18n="pm">Project Manager</p>
 
         <a class="row" href="tel:+966570118635">
           <div class="c"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
-          <div><span>Call or WhatsApp</span><b>+966 57 011 8635</b></div>
+          <div><span data-i18n="waLabel">Call or WhatsApp</span><b>+966 57 011 8635</b></div>
         </a>
         <a class="row" href="mailto:anuprasaily11@gmail.com">
           <div class="c"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v.4l-10 6.6L2 6.4V6a1 1 0 0 1 1-1zm-1 3.8 10 6.6 10-6.6V18a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg></div>
-          <div><span>Email</span><b>anuprasaily11@gmail.com</b></div>
+          <div><span data-i18n="emailLabel">Email</span><b>anuprasaily11@gmail.com</b></div>
         </a>
         <div class="row">
           <div class="c"><svg aria-hidden="true"><use href="#i-pin"/></svg></div>
-          <div><span>Address</span><b>P.O. Box 20571, P. Code 31952<br>Thoqbah, Saudi Arabia</b></div>
+          <div><span data-i18n="addressLabel">Address</span><b data-i18n="addressValue">P.O. Box 20571, P. Code 31952<br>Thoqbah, Saudi Arabia</b></div>
         </div>
         <a class="row" href="tel:+966138948302">
           <div class="c"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
-          <div><span>Office</span><b>+966 13 894 8302</b></div>
+          <div><span data-i18n="officeLabel">Office</span><b>+966 13 894 8302</b></div>
         </a>
       </div>
 
       <form id="quoteForm">
-        <h3>Request a quote</h3>
-        <p class="hint">This opens WhatsApp with your message ready to send.</p>
-        <label for="fName">Your name</label>
+        <h3 data-i18n="formTitle">Request a quote</h3>
+        <p class="hint" data-i18n="formHint">This opens WhatsApp with your message ready to send.</p>
+        <label for="fName" data-i18n="fName">Your name</label>
         <input id="fName" name="name" type="text" autocomplete="name" required>
-        <label for="fService">Service you need</label>
+        <label for="fService" data-i18n="fService">Service you need</label>
         <select id="fService" name="service">
-          <option>Building Construction</option>
-          <option>Masonry &amp; Plastering Works</option>
-          <option>Steel Fixing &amp; Concrete Works</option>
-          <option>Road Line Works</option>
-          <option>Earthworks &amp; Site Development</option>
-          <option>Rental Trucks</option>
+          <option data-i18n="svc1Title">Building Construction</option>
+          <option data-i18n="svc2Title">Masonry &amp; Plastering Works</option>
+          <option data-i18n="svc3Title">Steel Fixing &amp; Concrete Works</option>
+          <option data-i18n="svc4Title">Road Line Works</option>
+          <option data-i18n="svc5Title">Earthworks &amp; Site Development</option>
+          <option data-i18n="rentalTrucks">Rental Trucks</option>
         </select>
-        <label for="fMsg">Project details</label>
-        <textarea id="fMsg" name="message" placeholder="Location, size of work, start date..." required></textarea>
-        <button class="btn solid" type="submit">Send on WhatsApp</button>
+        <label for="fMsg" data-i18n="fMsg">Project details</label>
+        <textarea id="fMsg" name="message" data-i18n-placeholder="fMsgPlaceholder" placeholder="Location, size of work, start date..." required></textarea>
+        <button class="btn solid" type="submit" data-i18n="sendBtn">Send on WhatsApp</button>
       </form>
     </div>
   </div>
@@ -440,11 +450,11 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
     <div class="foot">
       <a class="brand" href="#top">
         <svg aria-hidden="true"><use href="#mz-logo"/></svg>
-        <span><b>Muhammad Zoman</b><small>General Contracting Est.</small></span>
+        <span><b data-i18n="brandName">Muhammad Zoman</b><small data-i18n="brandSub">General Contracting Est.</small></span>
       </a>
-      <div class="trusted"><svg aria-hidden="true"><use href="#i-hat"/></svg>Your Trusted Partner in Construction</div>
+      <div class="trusted"><svg aria-hidden="true"><use href="#i-hat"/></svg><span data-i18n="trusted">Your Trusted Partner in Construction</span></div>
     </div>
-    <div class="copy">&copy; <span id="yr">2026</span> Muhammad Zoman General Contracting Est. All rights reserved.</div>
+    <div class="copy">&copy; <span id="yr">2026</span> <span data-i18n="footCopy">Muhammad Zoman General Contracting Est. All rights reserved.</span></div>
   </div>
 </footer>
 
@@ -466,9 +476,113 @@ footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
   document.getElementById('quoteForm').addEventListener('submit',function(e){
     e.preventDefault();
     var f=e.target;
-    var text='Hello, my name is '+f.name.value+'.\nService: '+f.service.value+'\nDetails: '+f.message.value;
+    var isAr=document.documentElement.lang==='ar';
+    var text=isAr
+      ? 'مرحباً، اسمي '+f.name.value+'.\nالخدمة: '+f.service.value+'\nالتفاصيل: '+f.message.value
+      : 'Hello, my name is '+f.name.value+'.\nService: '+f.service.value+'\nDetails: '+f.message.value;
     window.open('https://wa.me/966570118635?text='+encodeURIComponent(text),'_blank','noopener');
   });
+
+  // ===== English / Arabic translations =====
+  var translations={
+    en:{
+      brandName:'Muhammad Zoman', brandSub:'General Contracting Est.',
+      navServices:'Services', navAbout:'About', navWork:'Our work', navQuote:'Get a quote',
+      tagline:'Building Today for a Better Tomorrow',
+      heroLead:'We are a reliable and professional contracting company, committed to delivering high-quality civil works and road line projects with safety, quality and timely completion.',
+      seeServices:'See our services',
+      servicesTitle:'Our Services',
+      servicesNote:'From the first excavation to the final interlock, we handle civil works, road line projects and equipment rental under one roof.',
+      svc1Title:'Building Construction', svc1Desc:'Residential | Commercial | Industrial',
+      svc2Title:'Masonry &amp; Plastering Works', svc2Desc:'CMU | Block | Internal &amp; External Plaster',
+      svc3Title:'Steel Fixing &amp; Concrete Works', svc3Desc:'Reinforcement | Formwork | Concreting',
+      svc4Title:'Road Line Works', svc4Desc:'Road Construction | Interlock | Curbstone | Asphalt Works',
+      svc5Title:'Earthworks &amp; Site Development', svc5Desc:'Excavation | Backfilling | Grading',
+      svc6Title:'Eearth Moving Equipment', svc6Desc:'Water Tanker | Dump Truck | Ready Mix | Drum Truck',
+      aboutTitle:'Your trusted partner in construction',
+      aboutP1:'Muhammad Zoman General Contracting Est. is based in Thoqbah, Saudi Arabia. We take on civil works and road line projects of every size, and we run each one with the same three commitments.',
+      aboutP2:'Talk to us early. A quick site discussion helps us plan the manpower, materials and trucks your project needs before work begins.',
+      aboutCta:'Discuss your project',
+      pillar1Title:'Safety', pillar1Desc:'Trained crews, proper PPE and a safe site on every job.',
+      pillar2Title:'Quality', pillar2Desc:'Good materials and careful workmanship from foundation to finish.',
+      pillar3Title:'Timely completion', pillar3Desc:'Clear schedules, and we keep you updated until handover.',
+      workTitle:'Our Work', workNote:'A look at the kind of projects we deliver.',
+      gal1:'Building construction', gal2:'Steel fixing &amp; concrete', gal3:'Road line works', gal4:'Earth Moving Equipment',
+      contactTitle:'Contact Us', contactNote:'Tell us about your project. We will get back to you on WhatsApp or by phone.',
+      pm:'Project Manager', waLabel:'Call or WhatsApp', emailLabel:'Email',
+      addressLabel:'Address', addressValue:'P.O. Box 20571, P. Code 31952<br>Thoqbah, Saudi Arabia',
+      officeLabel:'Office',
+      formTitle:'Request a quote', formHint:'This opens WhatsApp with your message ready to send.',
+      fName:'Your name', fService:'Service you need', rentalTrucks:'Rental Trucks',
+      fMsg:'Project details', fMsgPlaceholder:'Location, size of work, start date...',
+      sendBtn:'Send on WhatsApp',
+      trusted:'Your Trusted Partner in Construction',
+      footCopy:'Muhammad Zoman General Contracting Est. All rights reserved.'
+    },
+    ar:{
+      brandName:'محمد زمان', brandSub:'مؤسسة مقاولات عامة',
+      navServices:'خدماتنا', navAbout:'من نحن', navWork:'أعمالنا', navQuote:'اطلب عرض سعر',
+      tagline:'نبني اليوم من أجل غد أفضل',
+      heroLead:'نحن مؤسسة مقاولات موثوقة واحترافية، ملتزمون بتنفيذ الأعمال المدنية ومشاريع خطوط الطرق بجودة عالية، مع الالتزام بالسلامة والجودة والتسليم في الوقت المحدد.',
+      seeServices:'تعرف على خدماتنا',
+      servicesTitle:'خدماتنا',
+      servicesNote:'من أول أعمال الحفر وحتى الإنترلوك النهائي، نغطي الأعمال المدنية ومشاريع خطوط الطرق وتأجير المعدات تحت سقف واحد.',
+      svc1Title:'أعمال البناء والإنشاءات', svc1Desc:'سكني | تجاري | صناعي',
+      svc2Title:'أعمال البناء والتلييس', svc2Desc:'بلوك | طوب | لياسة داخلية وخارجية',
+      svc3Title:'أعمال حدادة وخرسانة', svc3Desc:'تسليح | نجارة مسلحة | صب خرساني',
+      svc4Title:'أعمال خطوط الطرق', svc4Desc:'إنشاء الطرق | إنترلوك | أرصفة | أعمال إسفلت',
+      svc5Title:'الأعمال الترابية وتطوير المواقع', svc5Desc:'حفر | ردم | تسوية',
+      svc6Title:'معدات نقل التربة', svc6Desc:'صهريج مياه | شاحنة قلاب | خرسانة جاهزة | شاحنة دراموندي',
+      aboutTitle:'شريككم الموثوق في أعمال البناء',
+      aboutP1:'مؤسسة محمد زمان للمقاولات العامة مقرها في الثقبة، المملكة العربية السعودية. نقوم بتنفيذ الأعمال المدنية ومشاريع خطوط الطرق بمختلف أحجامها، ونلتزم في كل مشروع بنفس المبادئ الثلاثة.',
+      aboutP2:'تواصلوا معنا مبكراً. نقاش سريع عن الموقع يساعدنا على تخطيط العمالة والمواد والشاحنات التي يحتاجها مشروعكم قبل بدء العمل.',
+      aboutCta:'ناقش مشروعك معنا',
+      pillar1Title:'السلامة', pillar1Desc:'طواقم مدربة، معدات وقاية مناسبة، وموقع آمن في كل عمل.',
+      pillar2Title:'الجودة', pillar2Desc:'مواد جيدة وحرفية دقيقة من الأساس حتى التشطيب.',
+      pillar3Title:'التسليم في الوقت المحدد', pillar3Desc:'جداول زمنية واضحة، ونبقيكم على اطلاع حتى التسليم.',
+      workTitle:'أعمالنا', workNote:'نظرة على نوعية المشاريع التي ننفذها.',
+      gal1:'أعمال البناء', gal2:'حدادة وخرسانة', gal3:'أعمال خطوط الطرق', gal4:'معدات نقل التربة',
+      contactTitle:'تواصل معنا', contactNote:'أخبرنا عن مشروعك، وسنتواصل معك عبر واتساب أو الهاتف.',
+      pm:'مدير المشروع', waLabel:'اتصال أو واتساب', emailLabel:'البريد الإلكتروني',
+      addressLabel:'العنوان', addressValue:'ص.ب 20571، الرمز البريدي 31952<br>الثقبة، المملكة العربية السعودية',
+      officeLabel:'المكتب',
+      formTitle:'اطلب عرض سعر', formHint:'سيتم فتح واتساب مع رسالتك جاهزة للإرسال.',
+      fName:'اسمك', fService:'الخدمة المطلوبة', rentalTrucks:'تأجير شاحنات',
+      fMsg:'تفاصيل المشروع', fMsgPlaceholder:'الموقع، حجم العمل، تاريخ البدء...',
+      sendBtn:'إرسال عبر واتساب',
+      trusted:'شريككم الموثوق في أعمال البناء',
+      footCopy:'مؤسسة محمد زمان للمقاولات العامة. جميع الحقوق محفوظة.'
+    }
+  };
+
+  function applyLang(lang){
+    document.documentElement.lang=lang;
+    document.documentElement.dir=(lang==='ar')?'rtl':'ltr';
+    var dict=translations[lang];
+    document.querySelectorAll('[data-i18n]').forEach(function(el){
+      var key=el.getAttribute('data-i18n');
+      if(dict[key]!==undefined) el.innerHTML=dict[key];
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
+      var key=el.getAttribute('data-i18n-placeholder');
+      if(dict[key]!==undefined) el.setAttribute('placeholder',dict[key]);
+    });
+    var langBtn=document.getElementById('langToggle');
+    langBtn.textContent=(lang==='ar')?'EN':'عربي';
+    try{ localStorage.setItem('mz-lang',lang); }catch(e){}
+  }
+
+  document.getElementById('langToggle').addEventListener('click',function(){
+    var current=document.documentElement.lang==='ar'?'ar':'en';
+    applyLang(current==='ar'?'en':'ar');
+  });
+
+  // load saved preference, if any
+  (function(){
+    var saved='en';
+    try{ saved=localStorage.getItem('mz-lang')||'en'; }catch(e){}
+    applyLang(saved);
+  })();
 </script>
 </body>
 </html>
