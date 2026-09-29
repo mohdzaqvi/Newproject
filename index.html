@@ -11,243 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Figtree:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --navy:#0a2f6b;
-  --blue:#0d4aa8;
-  --sky:#3b8fe8;
-  --ice:#eaf3ff;
-  --mist:#f5f9ff;
-  --ink:#16243b;
-  --muted:#56667d;
-  --line:#d6e4f7;
-  --accent:#f2a20f;
-  --white:#ffffff;
-  --radius:16px;
-  --head:'Outfit','Segoe UI',Arial,sans-serif;
-  --body:'Figtree','Segoe UI',Arial,sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
-html[dir="rtl"] body{font-family:'Cairo','Segoe UI',Arial,sans-serif}
-html[dir="rtl"] h1,html[dir="rtl"] h2,html[dir="rtl"] h3,html[dir="rtl"] .name,html[dir="rtl"] .ribbon,html[dir="rtl"] .brand b,html[dir="rtl"] .sub,html[dir="rtl"] .btn,html[dir="rtl"] .foot .trusted{font-family:'Cairo','Segoe UI',Arial,sans-serif}
-html[dir="rtl"] .sub::before{order:2}
-html[dir="rtl"] .row{text-align:right}
-html[dir="rtl"] .ribbon{clip-path:polygon(100% 0,0 0,26px 100%,100% 100%);padding:12px 28px 12px 64px;margin:0 calc(-1 * var(--edge)) 14px 0;padding-right:calc(var(--edge) + 28px);padding-left:28px}
-
-/* Language toggle button */
-.lang-btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border:1.5px solid var(--navy);border-radius:999px;background:#fff;color:var(--navy);font-weight:700;font-size:.88rem;cursor:pointer;font-family:var(--head);white-space:nowrap}
-.lang-btn:hover{background:var(--ice)}
-img,svg{max-width:100%;display:block}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
-.wrap{width:min(1180px,92%);margin-inline:auto}
-
-/* ---------- Header ---------- */
-header.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-.brand img{width:46px;height:46px;object-fit:contain}
-.brand b{display:block;font-family:var(--head);font-weight:700;color:var(--navy);font-size:1.05rem;line-height:1.1}
-.brand small{display:block;color:var(--muted);font-size:.78rem;line-height:1.2}
-nav ul{display:flex;gap:6px;list-style:none;margin:0;padding:0;align-items:center}
-nav a{display:block;padding:9px 14px;text-decoration:none;font-weight:500;color:var(--ink);border-radius:999px;transition:background .2s,color .2s}
-nav a:hover{background:var(--ice);color:var(--blue)}
-nav a.cta{background:var(--navy);color:#fff;font-weight:600}
-nav a.cta:hover{background:var(--blue)}
-.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--navy)}
-.menu-btn svg{margin:auto;width:24px;height:24px}
-
-/* ---------- Hero (video background) ---------- */
-.hero{position:relative;overflow:hidden;min-height:88vh;display:flex;align-items:center;background:var(--navy)}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
-.hero-overlay{position:absolute;inset:0;z-index:1;
-  background:linear-gradient(180deg,rgba(6,26,63,.82) 0%,rgba(9,38,86,.62) 45%,rgba(6,26,63,.9) 100%)}
-.hero-content{position:relative;z-index:2;padding-block:120px 130px;max-width:640px}
-.hero-logo{height:120px;width:auto;margin-bottom:8px;filter:brightness(0) invert(1) drop-shadow(0 4px 16px rgba(0,0,0,.35))}
-.name{font-family:var(--head);font-weight:800;color:#fff;font-size:clamp(2.4rem,5.4vw,4.1rem);line-height:1.04;margin:0;letter-spacing:-.02em;text-shadow:0 4px 24px rgba(0,0,0,.35)}
-.sub{display:flex;align-items:center;gap:14px;margin:10px 0 6px;font-family:var(--head);font-weight:600;color:#bcd9ff;font-size:clamp(1.25rem,2.6vw,1.8rem)}
-.sub::before,.sub::after{content:"";height:2px;background:#fff;flex:0 0 28px;opacity:.7}
-.sub::after{display:none}
-.tagline{font-style:italic;color:#e7f0ff;font-size:1.25rem;margin:0 0 20px}
-.lead{max-width:34rem;color:#cfe0f7;margin:0 0 28px}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--navy);transition:transform .15s,background .2s,color .2s;font-family:var(--head)}
-.btn.solid{background:var(--navy);color:#fff}
-.btn.solid:hover{background:var(--blue);border-color:var(--blue)}
-.btn.ghost{color:var(--navy);background:transparent}
-.btn.ghost:hover{background:var(--navy);color:#fff}
-.btn:active{transform:translateY(1px)}
-.hero .btn.ghost{color:#fff;border-color:#fff}
-.hero .btn.ghost:hover{background:#fff;color:var(--navy)}
-.hero-wave{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:90px;color:var(--navy);z-index:2}
-
-/* ---------- Sections ---------- */
-section{padding:84px 0}
-.ribbon{display:inline-block;background:var(--navy);color:#fff;font-family:var(--head);font-weight:700;font-size:clamp(1.5rem,3vw,2rem);padding:12px 64px 12px 28px;clip-path:polygon(0 0,100% 0,calc(100% - 26px) 100%,0 100%);--edge:calc((100vw - min(1180px,92vw)) / 2);margin:0 0 14px calc(-1 * var(--edge));padding-left:calc(var(--edge) + 28px)}
-.section-note{color:var(--muted);max-width:40rem;margin:0 0 44px}
-
-/* Services */
-#services{background:#fff}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;display:flex;gap:18px;align-items:flex-start;transition:border-color .2s,box-shadow .2s}
-.card:hover{border-color:var(--sky);box-shadow:0 10px 30px -14px rgba(13,74,168,.35)}
-.ico{flex:0 0 62px;width:62px;height:62px;border-radius:50%;background:var(--navy);display:grid;place-items:center}
-.ico svg{width:32px;height:32px}
-.card h3{font-family:var(--head);font-weight:700;color:var(--navy);font-size:1.15rem;line-height:1.25;margin:2px 0 8px}
-.card p{margin:0;color:var(--muted);font-size:.95rem;line-height:1.55}
-
-/* About */
-#about{background:var(--ice);position:relative}
-.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
-#about h2{font-family:var(--head);font-weight:800;color:var(--navy);font-size:clamp(1.9rem,3.6vw,2.7rem);line-height:1.12;margin:0 0 16px;letter-spacing:-.01em}
-#about p{color:var(--muted);margin:0 0 16px}
-.pillars{display:grid;gap:14px}
-.pillar{background:#fff;border-radius:var(--radius);padding:22px 24px;display:flex;gap:18px;align-items:center;border-left:6px solid var(--blue)}
-.pillar:nth-child(2){border-left-color:var(--sky)}
-.pillar:nth-child(3){border-left-color:var(--accent)}
-.pillar svg{flex:0 0 44px;width:44px;height:44px;color:var(--navy)}
-.pillar h3{margin:0 0 2px;font-family:var(--head);font-weight:700;color:var(--navy);font-size:1.15rem}
-.pillar p{margin:0;font-size:.95rem}
-
-/* Work gallery */
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:8px}
-.tile{margin:0;position:relative;height:clamp(320px,33vw,430px);overflow:hidden;clip-path:polygon(12% 0,100% 0,88% 100%,0 100%);margin-left:-3%}
-.tile:first-child{clip-path:polygon(0 0,100% 0,88% 100%,0 100%);margin-left:0}
-.tile:last-child{clip-path:polygon(12% 0,100% 0,100% 100%,0 100%)}
-.tile svg,.tile img{width:100%;height:100%;object-fit:cover}
-.tile figcaption{position:absolute;left:0;right:0;bottom:0;padding:38px 22px 16px;background:linear-gradient(0deg,rgba(10,47,107,.92),rgba(10,47,107,0));color:#fff;font-family:var(--head);font-weight:600}
-.gal-note{color:var(--muted);font-size:.9rem;margin-top:16px}
-
-/* Contact */
-#contact{background:#fff}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px}
-.info{background:var(--navy);color:#fff;border-radius:22px;padding:36px;position:relative;overflow:hidden}
-.info::after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;border:38px solid rgba(255,255,255,.07)}
-.info h3{font-family:var(--head);font-size:1.5rem;margin:0 0 4px}
-.info .role{color:#b8d3f6;margin:0 0 26px}
-.row{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px;text-decoration:none}
-.row .c{flex:0 0 44px;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--navy);display:grid;place-items:center}
-.row .c svg{width:22px;height:22px}
-.row span{display:block;color:#b8d3f6;font-size:.85rem}
-.row b{font-weight:600;font-size:1.05rem;word-break:break-word}
-a.row:hover b{text-decoration:underline}
-form{border:1px solid var(--line);border-radius:22px;padding:36px;background:var(--mist)}
-form h3{font-family:var(--head);color:var(--navy);font-size:1.5rem;margin:0 0 4px}
-form .hint{margin:0 0 22px;color:var(--muted);font-size:.95rem}
-label{display:block;font-weight:600;font-size:.92rem;margin:0 0 6px;color:var(--navy)}
-input,select,textarea{width:100%;font:inherit;padding:13px 14px;border:1px solid #bcd0ea;border-radius:12px;background:#fff;color:var(--ink);margin-bottom:16px}
-input:focus,select:focus,textarea:focus{outline:3px solid rgba(59,143,232,.35);border-color:var(--sky)}
-textarea{min-height:110px;resize:vertical}
-form button{width:100%;justify-content:center;cursor:pointer;font-size:1rem}
-
-/* Footer */
-footer{background:var(--navy);color:#dbe8fb;position:relative;padding:0}
-footer .wave{display:block;width:100%;height:70px;color:#fff;margin-bottom:-1px}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:34px 0 40px}
-.foot .brand img{filter:brightness(0) invert(1)}
-.foot .brand b{color:#fff}
-.foot .brand small{color:#a9c5ee}
-.foot .trusted{font-family:var(--head);font-style:italic;font-weight:500;font-size:1.3rem;color:#fff;display:flex;align-items:center;gap:12px}
-.foot .trusted svg{width:34px;height:34px;color:#fff}
-.copy{border-top:1px solid rgba(255,255,255,.15);padding:16px 0 22px;font-size:.88rem;color:#a9c5ee;text-align:center}
-
-/* Floating WhatsApp */
-.wa{position:fixed;right:18px;bottom:18px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 8px 24px -6px rgba(0,0,0,.35);transition:transform .2s}
-.wa:hover{transform:scale(1.07)}
-.wa svg{width:32px;height:32px}
-
-/* ---------- Responsive ---------- */
-@media (max-width:980px){
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .hero-content{padding-block:90px 110px;max-width:100%}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .gallery{grid-template-columns:repeat(2,1fr);gap:12px}
-  .tile,.tile:first-child,.tile:last-child{clip-path:none;margin-left:0;border-radius:var(--radius);height:auto;aspect-ratio:4/3}
-}
-@media (max-width:760px){
-  .menu-btn{display:grid}
-  nav{position:absolute;left:0;right:0;top:72px;background:#fff;border-bottom:1px solid var(--line);display:none;padding:10px 4%}
-  nav.open{display:block}
-  nav ul{flex-direction:column;align-items:stretch;gap:2px}
-  nav a{padding:13px 14px}
-  .brand small{display:none}
-  .grid{grid-template-columns:1fr}
-  section{padding:60px 0}
-  .info,form{padding:26px}
-  .hero{min-height:78vh}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-}
-
-/* ---------- Floating gallery ---------- */
-.gsec{position:relative;background:linear-gradient(180deg,var(--ice) 0%,#f7fbff 100%);overflow:hidden}
-.gsec .wrap{position:relative;z-index:1}
-.gbg i{position:absolute;display:block;pointer-events:none}
-.gbg i:nth-child(1){width:420px;height:420px;border-radius:50%;left:-140px;top:140px;background:radial-gradient(circle,#cfe4ff,rgba(207,228,255,0) 70%)}
-.gbg i:nth-child(2){width:520px;height:520px;border-radius:50%;right:-180px;bottom:20px;background:radial-gradient(circle,#bcd9ff,rgba(188,217,255,0) 70%)}
-.gbg i:nth-child(3){width:18px;height:18px;border-radius:4px;left:7%;top:44%;background:var(--accent);opacity:.85;animation:floaty 6s ease-in-out infinite}
-.gbg i:nth-child(4){width:13px;height:13px;border-radius:3px;right:9%;top:26%;background:var(--sky);opacity:.7;animation:floaty 7.5s ease-in-out -2s infinite}
-
-.float-gallery{--w:min(1180px,92vw);position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:0 30px;padding:24px 0 48px;align-items:start}
-.fg-col{display:flex;flex-direction:column;gap:34px;min-width:0}
-.fg-col:nth-child(2){margin-top:calc(var(--w) * .07)}
-.fg-col:nth-child(3){margin-top:calc(var(--w) * .025)}
-.ar43{aspect-ratio:4/3}.ar45{aspect-ratio:4/5}.ar34{aspect-ratio:3/4}
-.float-item{appearance:none;-webkit-appearance:none;font:inherit;position:relative;display:block;width:100%;padding:0;margin:0;overflow:hidden;cursor:zoom-in;
-  border:8px solid #fff;border-radius:18px;background:#fff;
-  box-shadow:0 26px 50px -24px rgba(10,47,107,.55),0 3px 10px rgba(10,47,107,.12);
-  rotate:var(--r,0deg);
-  animation:floaty var(--d,7s) ease-in-out var(--delay,0s) infinite;
-  transition:scale .35s ease,box-shadow .35s ease}
-.float-item img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:10px}
-.float-item:hover,.float-item:focus-visible{scale:1.045;z-index:3;animation-play-state:paused;box-shadow:0 34px 60px -22px rgba(10,47,107,.65),0 4px 14px rgba(10,47,107,.16)}
-.float-item .cap{position:absolute;left:0;right:0;bottom:0;padding:38px 16px 14px;text-align:start;color:#fff;font-family:var(--head);font-weight:600;font-size:.98rem;
-  background:linear-gradient(0deg,rgba(10,47,107,.92),rgba(10,47,107,0));border-radius:0 0 10px 10px}
-@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -14px}}
-
-/* lightbox */
-.lb{position:fixed;inset:0;z-index:100;background:rgba(6,20,45,.93);display:none;align-items:center;justify-content:center;padding:24px}
-.lb.open{display:flex}
-.lb figure{margin:0;max-width:min(1100px,88vw);text-align:center}
-.lb img{max-width:100%;max-height:76vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5);margin-inline:auto}
-.lb figcaption{color:#fff;margin-top:14px;font-family:var(--head);font-weight:600;font-size:1.1rem}
-.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;cursor:pointer;display:grid;place-items:center;padding:0;transition:background .2s}
-.lb-btn:hover{background:rgba(255,255,255,.28)}
-.lb-btn svg{width:24px;height:24px}
-.lb-close{top:18px;right:18px}
-.lb-left{left:18px;top:50%;translate:0 -50%}
-.lb-right{right:18px;top:50%;translate:0 -50%}
-
-@media (max-width:760px){
-  .float-gallery{grid-template-columns:1fr 1fr;gap:16px 14px;padding-bottom:30px}
-  .fg-col{display:contents}
-  .float-item{border-width:6px;border-radius:14px}
-  .ar43,.ar45,.ar34{aspect-ratio:4/5}
-  .float-item.wide-m{grid-column:1 / -1;aspect-ratio:16/10}
-  .float-item.dn{margin-top:28px}
-  .float-item.up{margin-top:-12px}
-  .float-item .cap{font-size:.85rem;padding:30px 10px 10px}
-  .lb-left,.lb-right{top:auto;bottom:22px;translate:none}
-  .lb-left{left:calc(50% - 60px)}
-  .lb-right{right:calc(50% - 60px)}
-}
-@media (prefers-reduced-motion:reduce){
-  .float-item,.gbg i{animation:none}
-}
-
-/* nav: keep links on one line; use the menu button on tablets so 5 items fit */
-nav a{white-space:nowrap}
-@media (max-width:900px) and (min-width:761px){
-  .menu-btn{display:grid}
-  nav{position:absolute;left:0;right:0;top:72px;background:#fff;border-bottom:1px solid var(--line);display:none;padding:10px 4%}
-  nav.open{display:block}
-  nav ul{flex-direction:column;align-items:stretch;gap:2px}
-  nav a{padding:13px 14px}
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -288,6 +52,7 @@ nav a{white-space:nowrap}
         <li><a href="#about" data-i18n="navAbout">About</a></li>
         <li><a href="#work" data-i18n="navWork">Our work</a></li>
         <li><a href="#gallery" data-i18n="navGallery">Gallery</a></li>
+        <li><button type="button" class="nav-link-btn" id="contactPanelBtn" data-i18n="navContacts">Contacts</button></li>
         <li><a href="#contact" class="cta" data-i18n="navQuote">Get a quote</a></li>
         <li><button type="button" class="lang-btn" id="langToggle">عربي</button></li>
       </ul>
@@ -384,7 +149,7 @@ nav a{white-space:nowrap}
         <figcaption data-i18n="gal1">Building construction</figcaption>
       </figure>
       <figure class="tile">
-        <img src="steel-fixing-concrete.jpg" alt="Steel fixing and concrete works" style="object-position:62% 50%" loading="lazy">
+        <img src="steel-fixing-concrete.png" alt="Steel fixing and concrete works" style="object-position:62% 50%" loading="lazy">
         <figcaption data-i18n="gal2">Steel fixing &amp; concrete</figcaption>
       </figure>
       <figure class="tile">
@@ -392,7 +157,7 @@ nav a{white-space:nowrap}
         <figcaption data-i18n="gal3">Road line works</figcaption>
       </figure>
       <figure class="tile">
-        <img src="earth-moving-equipment.jpg" alt="Earth moving equipment" style="object-position:62% 50%" loading="lazy">
+        <img src="earth-moving-equipment.jpeg" alt="Earth moving equipment" style="object-position:62% 50%" loading="lazy">
         <figcaption data-i18n="gal4">Earth Moving Equipment</figcaption>
       </figure>
     </div>
@@ -499,6 +264,34 @@ nav a{white-space:nowrap}
   </div>
 </footer>
 
+<!-- ============ CONTACT DIRECTORY SIDE PANEL ============ -->
+<div class="cp-backdrop" id="cpBackdrop"></div>
+<aside class="cp-panel" id="cpPanel" role="dialog" aria-modal="true" aria-labelledby="cpTitleEl">
+  <div class="cp-head">
+    <h3 id="cpTitleEl" data-i18n="cpTitle">Contact Directory</h3>
+    <button type="button" class="cp-close" id="cpClose" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+  </div>
+  <p class="cp-note" data-i18n="cpNote">Reach the right person directly.</p>
+  <div class="cp-list">
+    <a class="cp-card" href="tel:+966500880555">
+      <div class="cp-avatar"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+      <div><span class="cp-role" data-i18n="cpRole1">General Manager</span><b class="cp-num">+966 50 088 0555</b></div>
+    </a>
+    <a class="cp-card" href="tel:+966503880876">
+      <div class="cp-avatar"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+      <div><span class="cp-role" data-i18n="cpRole2">Accountant</span><b class="cp-num">+966 50 388 0876</b></div>
+    </a>
+    <a class="cp-card" href="tel:+966544291933">
+      <div class="cp-avatar"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+      <div><span class="cp-role" data-i18n="cpRole3">Public Relations Manager</span><b class="cp-num">+966 54 429 1933</b></div>
+    </a>
+    <a class="cp-card" href="tel:+966570118635">
+      <div class="cp-avatar"><svg aria-hidden="true"><use href="#i-phone"/></svg></div>
+      <div><span class="cp-role" data-i18n="cpRole4">Project Manager</span><b class="cp-num">+966 57 011 8635</b></div>
+    </a>
+  </div>
+</aside>
+
 <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
   <button type="button" class="lb-btn lb-close" id="lbClose" aria-label="Close"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
   <button type="button" class="lb-btn lb-left" id="lbLeft" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
@@ -506,185 +299,8 @@ nav a{white-space:nowrap}
   <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
 </div>
 
-<a class="wa" href="https://wa.me/0503880876" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
+<a class="wa" href="https://wa.me/966503880876" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg aria-hidden="true"><use href="#i-wa"/></svg></a>
 
-<script>
-  // mobile menu
-  var btn=document.getElementById('menuBtn'), nav=document.getElementById('nav');
-  btn.addEventListener('click',function(){
-    var open=nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded',open);
-  });
-  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false');});});
-
-  // footer year
-  document.getElementById('yr').textContent=new Date().getFullYear();
-
-  // quote form -> WhatsApp
-  document.getElementById('quoteForm').addEventListener('submit',function(e){
-    e.preventDefault();
-    var f=e.target;
-    var isAr=document.documentElement.lang==='ar';
-    var text=isAr
-      ? 'مرحباً، اسمي '+f.name.value+'.\nالخدمة: '+f.service.value+'\nالتفاصيل: '+f.message.value
-      : 'Hello, my name is '+f.name.value+'.\nService: '+f.service.value+'\nDetails: '+f.message.value;
-    window.open('https://wa.me/0503880876?text='+encodeURIComponent(text),'_blank','noopener');
-  });
-
-  // ===== English / Arabic translations =====
-  var translations={
-    en:{
-      brandName:'Mohammed Zoman Al Hajri', brandSub:'General Contracting Est.',
-      navServices:'Services', navAbout:'About', navWork:'Our work', navGallery:'Gallery', navQuote:'Get a quote',
-      tagline:'Building Today for a Better Tomorrow',
-      heroLead:'We are a reliable and professional contracting company, committed to delivering high-quality civil works and road line projects with safety, quality and timely completion.',
-      seeServices:'See our services',
-      servicesTitle:'Our Services',
-      servicesNote:'From the first excavation to the final interlock, we handle civil works, road line projects and equipment rental under one roof.',
-      svc1Title:'Building Construction', svc1Desc:'Residential | Commercial | Industrial',
-      svc2Title:'Masonry &amp; Plastering Works', svc2Desc:'CMU | Block | Internal &amp; External Plaster',
-      svc3Title:'Steel Fixing &amp; Concrete Works', svc3Desc:'Reinforcement | Formwork | Concreting',
-      svc4Title:'Road Line Works', svc4Desc:'Road Construction | Interlock | Curbstone | Asphalt Works',
-      svc5Title:'Earthworks &amp; Site Development', svc5Desc:'Excavation | Backfilling | Grading',
-      svc6Title:'Eearth Moving Equipment', svc6Desc:'Water Tanker | Dump Truck | Ready Mix | Drum Truck',
-      aboutTitle:'Your trusted partner in construction',
-      aboutP1:'Muhammad Zoman General Contracting Est. is based in Thoqbah, Saudi Arabia. We take on civil works and road line projects of every size, and we run each one with the same three commitments.',
-      aboutP2:'Talk to us early. A quick site discussion helps us plan the manpower, materials and trucks your project needs before work begins.',
-      aboutCta:'Discuss your project',
-      pillar1Title:'Safety', pillar1Desc:'Trained crews, proper PPE and a safe site on every job.',
-      pillar2Title:'Quality', pillar2Desc:'Good materials and careful workmanship from foundation to finish.',
-      pillar3Title:'Timely completion', pillar3Desc:'Clear schedules, and we keep you updated until handover.',
-      workTitle:'Our Work', workNote:'A look at the kind of projects we deliver.',
-      galleryTitle:'Gallery', galleryNote:'A closer look at our sites, equipment and crews. Tap any photo to view it larger.',
-      gal1:'Building construction', gal2:'Steel fixing &amp; concrete', gal3:'Road line works', gal4:'Earth Moving Equipment',
-      gal5:'Concrete pump at work', gal6:'Concrete casting', gal7:'Pipework &amp; reinforcement', gal8:'Landscape &amp; finishing works', gal9:'Trench reinforcement works',
-      contactTitle:'Contact Us', contactNote:'Tell us about your project. We will get back to you on WhatsApp or by phone.',
-      pm:'Project Manager', waLabel:'Call or WhatsApp', emailLabel:'Email',
-      addressLabel:'Address', addressValue:'P.O. Box 20571, P. Code 31952<br>Thoqbah, Saudi Arabia',
-      officeLabel:'Office',
-      formTitle:'Request a quote', formHint:'This opens WhatsApp with your message ready to send.',
-      fName:'Your name', fService:'Service you need', rentalTrucks:'Rental Trucks',
-      fMsg:'Project details', fMsgPlaceholder:'Location, size of work, start date...',
-      sendBtn:'Send on WhatsApp',
-      trusted:'Your Trusted Partner in Construction',
-      footCopy:'Muhammad Zoman General Contracting Est. All rights reserved.'
-    },
-    ar:{
-      brandName:' مؤسسة محمد زومان الهاجري ', brandSub:' مقاولات عامة',
-      navServices:'خدماتنا', navAbout:'من نحن', navWork:'أعمالنا', navGallery:'المعرض', navQuote:'اطلب عرض سعر',
-      tagline:'نبني اليوم من أجل غد أفضل',
-      heroLead:'نحن مؤسسة مقاولات موثوقة واحترافية، ملتزمون بتنفيذ الأعمال المدنية ومشاريع خطوط الطرق بجودة عالية، مع الالتزام بالسلامة والجودة والتسليم في الوقت المحدد.',
-      seeServices:'تعرف على خدماتنا',
-      servicesTitle:'خدماتنا',
-      servicesNote:'من أول أعمال الحفر وحتى الإنترلوك النهائي، نغطي الأعمال المدنية ومشاريع خطوط الطرق وتأجير المعدات تحت سقف واحد.',
-      svc1Title:'أعمال البناء والانشاءات والبلاط', svc1Desc:'سكني | تجاري | صناعي',
-      svc2Title:'تاجير المعدات والاليات', svc2Desc:'بلوك | طوب | لياسة داخلية وخارجية',
-      svc3Title:'أعمال حدادة وخرسانة', svc3Desc:'تسليح | نجارة مسلحة | صب خرساني',
-      svc4Title:'أعمال خطوط الطرق', svc4Desc:'إنشاء الطرق | إنترلوك | أرصفة | أعمال إسفلت',
-      svc5Title:'الأعمال الترابية وتطوير المواقع', svc5Desc:'حفر | ردم | تسوية',
-      svc6Title:'معدات نقل التربة', svc6Desc:'صهريج مياه | شاحنة قلاب | خرسانة جاهزة | شاحنة دراموندي',
-      aboutTitle:'شريككم الموثوق في أعمال البناء',
-      aboutP1:'مؤسسة محمد زومان الهاجري للمقاولات العامة مقرها في الخبر،الثقبة، المملكة العربية السعودية. نقوم بتنفيذ الأعمال المدنية ومشاريع خطوط الطرق بمختلف أحجامها، ونلتزم في كل مشروع بنفس المبادئ الثلاثة.',
-      aboutP2:'تواصلوا معنا مبكراً. نقاش سريع عن الموقع يساعدنا على تخطيط العمالة والمواد والشاحنات التي يحتاجها مشروعكم قبل بدء العمل.',
-      aboutCta:'ناقش مشروعك معنا',
-      pillar1Title:'السلامة', pillar1Desc:'طواقم مدربة، معدات وقاية مناسبة، وموقع آمن في كل عمل.',
-      pillar2Title:'الجودة', pillar2Desc:'مواد جيدة وحرفية دقيقة من الأساس حتى التشطيب.',
-      pillar3Title:'التسليم في الوقت المحدد', pillar3Desc:'جداول زمنية واضحة، ونبقيكم على اطلاع حتى التسليم.',
-      workTitle:'أعمالنا', workNote:'نظرة على نوعية المشاريع التي ننفذها.',
-      galleryTitle:'معرض الصور', galleryNote:'نظرة أقرب على مواقعنا ومعداتنا وفرقنا. اضغط على أي صورة لعرضها بشكل أكبر.',
-      gal1:'أعمال البناء', gal2:'حدادة وخرسانة', gal3:'أعمال خطوط الطرق', gal4:'معدات نقل التربة',
-      gal5:'مضخة خرسانة أثناء العمل', gal6:'أعمال الصب الخرساني', gal7:'أعمال الأنابيب والتسليح', gal8:'أعمال التشطيب وتنسيق المواقع', gal9:'أعمال التسليح في الخندق',
-      contactTitle:'تواصل معنا', contactNote:'أخبرنا عن مشروعك، وسنتواصل معك عبر واتساب أو الهاتف.',
-      pm:'مدير المشروع', waLabel:'اتصال أو واتساب', emailLabel:'البريد الإلكتروني',
-      addressLabel:'العنوان', addressValue:'ص.ب 20571، الرمز البريدي 31952<br> المملكة العربية السعودية ، الخبر ، الثقبة ',
-      officeLabel:'المكتب',
-      formTitle:'اطلب عرض سعر', formHint:'سيتم فتح واتساب مع رسالتك جاهزة للإرسال.',
-      fName:'اسمك', fService:'الخدمة المطلوبة', rentalTrucks:'تأجير شاحنات',
-      fMsg:'تفاصيل المشروع', fMsgPlaceholder:'الموقع، حجم العمل، تاريخ البدء...',
-      sendBtn:'إرسال عبر واتساب',
-      trusted:'شريككم الموثوق في أعمال البناء',
-      footCopy:'مؤسسة محمد زومان الهاجري للمقاولات العامة. جميع الحقوق محفوظة.'
-    }
-  };
-
-  function applyLang(lang){
-    document.documentElement.lang=lang;
-    document.documentElement.dir=(lang==='ar')?'rtl':'ltr';
-    var dict=translations[lang];
-    document.querySelectorAll('[data-i18n]').forEach(function(el){
-      var key=el.getAttribute('data-i18n');
-      if(dict[key]!==undefined) el.innerHTML=dict[key];
-    });
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el){
-      var key=el.getAttribute('data-i18n-placeholder');
-      if(dict[key]!==undefined) el.setAttribute('placeholder',dict[key]);
-    });
-    var langBtn=document.getElementById('langToggle');
-    langBtn.textContent=(lang==='ar')?'EN':'عربي';
-    try{ localStorage.setItem('mz-lang',lang); }catch(e){}
-  }
-
-  document.getElementById('langToggle').addEventListener('click',function(){
-    var current=document.documentElement.lang==='ar'?'ar':'en';
-    applyLang(current==='ar'?'en':'ar');
-  });
-
-  // load saved preference, if any
-  (function(){
-    var saved='en';
-    try{ saved=localStorage.getItem('mz-lang')||'en'; }catch(e){}
-    applyLang(saved);
-  })();
-
-  // ===== Floating gallery + lightbox =====
-  (function(){
-    var tiles=document.querySelectorAll('#work .tile img');
-    document.querySelectorAll('#floatGallery img[data-reuse]').forEach(function(im){
-      var t=tiles[+im.getAttribute('data-reuse')];
-      if(t){ im.src=t.src; }
-    });
-    var items=[].slice.call(document.querySelectorAll('#floatGallery .float-item'));
-    items.sort(function(a,b){ return (+a.style.order)-(+b.style.order); });
-    var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap');
-    var cur=0, lastFocus=null;
-    function isRtl(){ return document.documentElement.dir==='rtl'; }
-    function show(i){
-      cur=(i+items.length)%items.length;
-      var im=items[cur].querySelector('img');
-      lbImg.src=im.src; lbImg.alt=im.alt;
-      lbCap.textContent=items[cur].querySelector('.cap').textContent;
-    }
-    function openLb(i){
-      lastFocus=document.activeElement; show(i);
-      lb.classList.add('open'); document.body.style.overflow='hidden';
-      document.getElementById('lbClose').focus();
-    }
-    function closeLb(){
-      lb.classList.remove('open'); document.body.style.overflow='';
-      if(lastFocus&&lastFocus.focus) lastFocus.focus();
-    }
-    function goLeft(){ show(cur+(isRtl()?1:-1)); }
-    function goRight(){ show(cur+(isRtl()?-1:1)); }
-    items.forEach(function(it,i){ it.addEventListener('click',function(){ openLb(i); }); });
-    document.getElementById('lbClose').addEventListener('click',closeLb);
-    document.getElementById('lbLeft').addEventListener('click',goLeft);
-    document.getElementById('lbRight').addEventListener('click',goRight);
-    lb.addEventListener('click',function(e){ if(e.target===lb) closeLb(); });
-    document.addEventListener('keydown',function(e){
-      if(!lb.classList.contains('open')) return;
-      if(e.key==='Escape') closeLb();
-      else if(e.key==='ArrowLeft') goLeft();
-      else if(e.key==='ArrowRight') goRight();
-    });
-    // simple swipe on touch screens
-    var sx=null;
-    lb.addEventListener('touchstart',function(e){ sx=e.touches[0].clientX; },{passive:true});
-    lb.addEventListener('touchend',function(e){
-      if(sx===null) return;
-      var dx=e.changedTouches[0].clientX-sx; sx=null;
-      if(Math.abs(dx)>50){ if(dx>0) goLeft(); else goRight(); }
-    });
-  })();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
